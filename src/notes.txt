@@ -1,0 +1,36 @@
+API - Web service
+servidor que fornece dados
+
+Protocolo HTTP
+modelo cliente-servidor
+
+Requisição HTTP
+URL: https://pokeapi.co/api/v2/pokemon
+	${ip}/${path = caminho de identificação do recurso}
+
+IP: https://pokeapi.co
+
+path: /api/v2/pokemon
+
+Tipo de requisição: GET | POST | PUT | DELETE | PATCH
+
+Formas de se passar dados: no próprio caminho
+Query String: sempre vem após a interrogação na URL
+ - É uma estrutura chave-valor
+ ex: ?type=grass&name=i
+
+Request Header	&
+Response Header	:
+Configuração da API
+
+Request BODY: corpo da requisição, dado que vai trafegar
+{
+	"name":"Teste"
+}
+
+status code: status da requisição
+ex: 200, 404, 505...
+
+Existem certos processamentos que a resposta não vêm
+de imediado (assync) e em algum momento vai ter uma
+resposta.
