@@ -34,3 +34,16 @@ ex: 200, 404, 505...
 Existem certos processamentos que a resposta não vêm
 de imediado (assync) e em algum momento vai ter uma
 resposta.
+
+
+<---- FETCH API ---->
+Fornece uma interface para realizar a busca de recursos
+- Retorna a promessa de uma resposta
+- Possui um argumento obrigatório (o caminho para o recurso que deseja obter)
+
+Método THEN
+- Retorna uma promisse
+- Possui dois argumentos, que são callbacks. Uma para sucesso e a outra para fracasso
+
+Método finally
+- Executa um código independente da promisse ter sido realizada 
