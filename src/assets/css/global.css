@@ -5,15 +5,37 @@
     box-sizing: border-box;
 }
 /* ---------- colors for style ---------- */
-:root { 
+:root {
+    --color-tittle: #2E3057;
     --color-bg-poke: #49d0b0;
     --color-text: #fff;
     --color-number: black;
     --color-box-types: #61e1ca;
     --color-bg-general: #f6f8fc;
+
+    --color-bg-pk-normal: #a6a877;
+    --color-bg-pk-grass: #49D0B0;
+    --color-bg-pk-fire: #FC6D6B;
+    --color-bg-pk-water: #6FB6F9;
+    --color-bg-pk-eletric: #FFD76E;
+    --color-bg-pk-ice: #98d5d7;
+    --color-bg-pk-ground: #dfbf69;
+    --color-bg-pk-flying: #a98ff0;
+    --color-bg-pk-poison: #7C528C;
+    --color-bg-pk-fighting: #e98945;
+    --color-bg-pk-psychic: #f86b95; 
+    --color-bg-pk-dark: #725847;
+    --color-bg-pk-rock: #b6a350;
+    --color-bg-pk-bug: #aebb3b;
+    --color-bg-pk-ghost: #6e5896;
+    --color-bg-pk-steel: #b9b7cf;
+    --color-bg-pk-dragon: #6f38f6;
+    --color-bg-pk-fairly: #f9aec7;
+
+    --color-bg-button: #6c79db;
 }
 
-/*----------- first Mobile -----------*/
+/*----------- first Mobile ----------- bf3029*/
 body { 
     background-color: var(--color-bg-general);
 }
@@ -27,15 +49,18 @@ body {
 
 }
 .detail > .types > .type { 
-    background-color: var(--color-box-types);
+    /* background-color: var(--color-box-types); */
     padding: .25rem .5rem;
     font-size: .825rem;
+    font-weight: 300;
     margin: .25rem 0;
     border-radius: .625rem;
+    filter: brightness(1.1);
+    text-align: center;
 }
 
 /*------------ Responsivity ------------*/
-@media screen and (min-width: 380px) { 
+/* @media screen and (min-width: 380px) { 
     .pokemons { 
         grid-template-columns: 1fr 1fr;
     }
@@ -45,7 +70,7 @@ body {
     .pokemons { 
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
+} */
 
 @media screen and (min-width: 992px) {
     .content { 
@@ -53,8 +78,5 @@ body {
         margin: 1rem auto;
         max-height: auto;
         border-radius: 1rem;
-    }
-    .pokemons { 
-        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
