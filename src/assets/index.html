@@ -14,18 +14,43 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!---------------------------- CSS Global -------------------------------------->
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/pokedex.css" />
+    <link rel="stylesheet" href="./css/popup.css" />
+
+    <!---------------------------- Icons -------------------------------------->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
+    <!---------------------------- Init Header -------------------------------------->
     <header class="header">
       <h1 class="tittle">Pokedex</h1>
     </header>
+
     <section class="content">
       <ol id="pokemonList" class="pokemons">
         <!-------- Pokemons -------->
       </ol>
+
       <div class="pagination">
         <button type="button" id="loadMore">Load more</button>
       </div>
@@ -35,5 +60,8 @@
     <script src="./js/poke-api.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/pokemon-model.js"></script>
+    <script src="./js/popup-Poke.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </body>
 </html>

@@ -1,5 +1,7 @@
 const pokeAPI = {};
 
+
+/*----------Function to convert object models----------*/
 function convertPokeApiDetailToPokemon(pokeDetail) {
   const pokemon = new Pokemon();
   pokemon.number = pokeDetail.id;
@@ -15,24 +17,35 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
   return pokemon;
 }
 
-pokeAPI.getPokemonDetail = (pokemon) => { 
+//return a model of pokemon more simple
+pokeAPI.getPokemonDetail = (pokemon) => {
   return fetch(pokemon.url).then((response) => response.json())
   .then(convertPokeApiDetailToPokemon)
 }
 
-pokeAPI.getPokemons = (offset = 0, limit = 10) => {
-  // Requisição HTTP
+pokeAPI.getPokemons = (offset = 0, limit = 8) => {
+  //HTTP Request
   const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
   return fetch(url)
-    //Retorna a promessa de uma resposta convertida em JSON
+    //Return the Promisse converted in JSON
     .then((response) => response.json())
 
-    //Recebe o body convertido
+    //Receive the converted Body
     .then((jsonBody) => jsonBody.results)
 
     .then((pokemons) => pokemons.map(pokeAPI.getPokemonDetail))
     .then((detailRequest) => Promise.all(detailRequest))
     .then((pokemonsDetail) => pokemonsDetail)
-    //Captura os erros de requisição
+
+    //Catch the request errors
     .catch((error) => console.error(error));
 };
+
+//Request for a more details about Pokemon(used in Popups)
+pokeAPI.getPokemon = (number_pokemon) => {
+  const url = `https://pokeapi.co/api/v2/pokemon/${number_pokemon}/`; 
+  return fetch(url)
+  .then((response) => response.json())
+
+  .catch((error) => console.error(error))
+}
