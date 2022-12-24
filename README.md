@@ -30,3 +30,4 @@ Ao clicar no botão sobre do pokemon, um popup é apresentado contendo mais info
 <img src="https://img.shields.io/badge/STATUS-COMPLETE-green" alt="status do projeto"/>
 
 <h3>URL</H3>
+Caso queira testar a aplicação, segue-se a URL: https://gabriel-vict0r.github.io/pokedex/src/assets/
